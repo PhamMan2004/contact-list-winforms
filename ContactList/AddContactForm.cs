@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ContactList
 {
-    public partial class MainForm: Form
+    public partial class AddContactForm : Form
     {
-        public MainForm()
+        public AddContactForm()
         {
             InitializeComponent();
         }
@@ -22,15 +22,11 @@ namespace ContactList
 
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            AddContactForm form = new AddContactForm();
-            form.ShowDialog();
+            string hoTen = txtHoTen.Text;
+            string soDienThoai = txtSDT.Text;
+            MessageBox.Show("Đã lưu: " + hoTen + " - " + soDienThoai);
         }
     }
 }
